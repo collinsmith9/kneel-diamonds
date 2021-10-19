@@ -1,6 +1,6 @@
 import { getMetals, setMetal } from "./database.js"
 
-const metals = getMetals()
+const metalsArray = getMetals()
 
 document.addEventListener(
     "change",
@@ -15,7 +15,7 @@ export const Metals = () => {
     let html = "<ul>"
 
     // This is how you have been converting objects to <li> elements
-    for (const metal of metals) {
+    for (const metal of metalsArray) {
         html += `<li>
             <input type="radio" name="metal" value="${metal.id}" /> ${metal.metal}
         </li>`
